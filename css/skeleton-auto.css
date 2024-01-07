@@ -34,7 +34,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   text-align: center;
   margin: 0 auto;
   padding: 0 20px;
@@ -95,6 +95,13 @@ body {
   font-weight: 400;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
+  color: #212759;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+  }
 }
 
 /* Typography
@@ -218,11 +225,11 @@ hr {
 50% (default): True circle
 */
 .avatar {
-  width: 128px;
+  /* width: 128px; */
   height: 128px;
   object-fit: cover;
   background-position: center;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 /* open-sans-regular - vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic */
