@@ -105,6 +105,43 @@
         <!-- Welcome Website -->
         <!-- <a class="button button-default" href="https://welcome.eees.au/" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-calendar.svg" alt="">New this year? Start here!</a><br> -->
 
+
+        <!-- Industry night quiz button; The section below ads a button that will only appear during time when the quiz is active -->
+        <style>
+          .glow-border {
+            animation: glow 1s ease-in-out infinite alternate;
+          }
+        
+          @keyframes glow {
+            0% {
+              box-shadow: 0 0 5px rgb(255, 119, 0);
+            }
+            100% {
+              box-shadow: 0 0 20px rgb(255, 77, 0);
+            }
+          }
+        </style>
+        
+        <a id="timedbutton" class="button button-default glow-border" href="https://forms.gle/FJKtMo8cccSNhfYs8" target="_blank" rel="noopener" role="button" style="background-color: rgb(255, 77, 0); color: white; border: none;">IEEE Industry night Quiz</a><br>
+        
+        <script>
+          window.onload = function () {
+              var button = document.getElementById("timedbutton");
+              var currentTime = new Date();
+              var targetTime = new Date("2024-04-23T17:30:00"); // Change to your target time
+              var endTime = new Date("2024-04-23T23:00:00"); // Change to your end time
+      
+              // Check if current time is between 4pm and 6pm on April 23, 2023
+              if (currentTime >= targetTime && currentTime <= endTime) {
+                button.style.visibility = "visible";
+              } else {
+                button.style.visibility = "hidden";
+              }
+          };
+        </script>
+
+
+        
         <!-- IEEE Industry Night -->
         <a class="button button-default" href="https://www.eventbrite.com.au/e/ieee-south-australia-student-industry-night-2024-tickets-876390897767" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-calendar.svg" alt="">IEEE Student-Industry Night</a><br>
 
