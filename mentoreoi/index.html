@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="redirectMeta" http-equiv="refresh" content="3;">
+    <title>Redirecting...</title>
+    <style>
+        /* Dark Mode Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background-color: #2457F5;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #121212;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #f0f0f0;
+        }
+        .url-display {
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- URL Variable -->
+    <script>
+        const redirectUrl = "https://forms.gle/cVryHSY1jSafPhwP6"; // Define the redirect URL variable
+    </script>
+    <a target="_blank" rel="noopener" style="display: flex; justify-content: center; padding-bottom: 20px;">
+          <img src="..\images\eeesau.svg" class="avatar" alt="Due tomorrow, do tommorow" style="width: 256px; height: 256px; border-radius: 8px;">
+    </a>
+    <div class="container">
+        <h1>Redirecting you...</h1>
+        <p class="url-display">Direct URL: <span id="url"></span></p>
+        <a href="#" onclick="window.location.href = redirectUrl;">
+            <button class="button">Click here if not redirected automatically</button>
+        </a>
+    </div>
+
+    <script>
+        // Update the display with the full URL
+        document.getElementById('url').innerText = redirectUrl;
+        
+        // Set the meta refresh tag dynamically using the redirect URL
+        document.getElementById('redirectMeta').setAttribute('content', '3; url=' + redirectUrl);
+    </script>
+</body>
+</html>
